@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "DNSans";
+  src: url(./Assets/fonts-family/DMSans-variable.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DNSans";
+}
+/* yaha se header ki styling  shuru hoty he  */
+.header {
+  height: 70px;
+  background-color: white;
+  position: relative;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+.links > ul {
+  display: flex;
+  list-style: none;
+}
+.links > ul > li > a {
+  text-decoration: none;
+  color: black;
+  margin: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+}
+.links > ul > li > a:hover {
+  color: #764af1;
+}
+.links > ul > li > input {
+  background-image: url(./Assets/Navbar/search.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+}
+/* yaha per header ki styling end hoty he  */
+
+/* yaha se home section ki styling shuru hoty he  */
+#home-section {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 108vh;
+  background: rgba(36, 35, 57, 0.769); /* black overlay with 50% opacity */
+  z-index: 1; /* behind text */
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  row-gap: 2rem;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* overlay ke upar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* text center align */
+  padding-bottom: 2rem;
+}
+.home-content > h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.home-content > p {
+  color: rgb(183, 180, 180);
+}
+.home-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  border-radius: 10px;
+  background-color: #764af1;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+.home-btn:hover{
+  background-color: #5a23f1;
+}
+.setting-icon {
+  height: 40px;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  border-top-right-radius: 45%;
+  border-bottom-right-radius: 45%;
+  
+}
+.setting-icon>img{
+  height: 40px;
+  animation: rotateIcon 2s linear infinite;
+}
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ye background  image animation  ki stylng he  */
+.slideshow {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  animation: fadeBlink 12s infinite;
+}
+
+/* Each image with its own delay */
+.slide1 {
+  background-image: url("./Assets/Home-section/bg01.jpeg");
+  animation-delay: 0s;
+  /* animation-duration: 3s; */
+}
+.slide2 {
+  background-image: url("./Assets/Home-section/bg02.jpeg");
+  animation-delay: 4s;
+}
+.slide3 {
+  background-image: url("./Assets/Home-section/bg03.jpeg");
+  animation-delay: 8s;
+}
+
+/* Keyframes for slow fade out + fast blink in */
+@keyframes fadeBlink {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.02);
+  } /* slowly fade out */
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1);
+  } /* blink in instantly */
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+/* yaha tak background image animation he  */
+
+.bottom-image {
+  position: absolute;
+  bottom: 0;
+  transform: scale(2);
+  z-index: 3;
+}
+/* yaha per home section ki styling  end hoty he  */
+
+/* yaha per trusted partners waghera k section ki styling shuru hoty he  */
+.trusted-section{
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* z-index: -1; */
+}
+
+.arrow{
+  position: absolute;
+  left: 50%;
+  top: -2.5rem;
+  z-index: 4;
+  background-color:#F2F1FA;
+  padding: .9rem;
+  border-radius: 50%;
+  
+}
+.arrow>img{
+  height: 20px;
+}
+.arrow:hover{
+  background-color: #764af1;
+  color: white;
+}
+
+.partners{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.partners-div{
+  display: flex;
+  justify-content: center;
+  
+  margin: 20px;
+  padding: 1rem;
+  height: 230px;
+  flex: 28%;
+  border: 1px solid rgba(190, 188, 188, 0.577);
+}
+
+.icon-div>img{
+  height: 70px;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px dotted rgb(124, 123, 123);
+  border-radius: 50%;
+}
+.icon-name{
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.icon-pera{
+  color: rgb(110, 110, 110);
+  line-height: 1.5rem;
+}
+/* yaha per trusted section ki styling  end hoty he  */
+
+footer{
+  height: 60vh;
+  background-color: #161C2D;
+ position: relative;
+ 
+}
+.footer-icon{
+  height: 40px;
+  width: 40px;
+  border-radius: 20%;
+  padding: .6rem;
+  border: 1px solid #414e70;
+  transition: all 0.3s ease-out;
+}
+.footer-icon:hover{
+  background-color: #764af1;
+}
+
+.footer-div{
+  padding-top: 4rem;
+  width: 86%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+#footer-logo-div>p{
+color: rgb(184, 180, 180);
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+.footer-links{
+  display: flex;
+  flex-direction: column;
+}
+.footer-links>p{
+  color: white;
+  font-size: 1.5rem;
+}
+.footer-links>a{
+  text-decoration: none;
+  color: rgb(170, 166, 166);
+   padding: 5px;
+   transition: all 0.3s ease-out;
+}
+#right-icon{
+  height: 14px;
+}
+.footer-links>a:hover{
+  color: #764af1;
+}
+.footer-address{
+  display: flex;
+  flex-direction: column;
+}
+.footer-address>p{
+  color: rgb(182, 177, 177);
+  padding: 5px;
+}
+.footer-address>p#heading{
+  font-size: 1.5rem;
+  color: white;
+}
+.address-icons{
+  height: 15px;
+  padding-right:5px;
+}
+
+.copy-right-div{
+  height: 100px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+  border-top: 1px solid rgb(157, 155, 155);
+  position: absolute;
+  bottom: 0;
+}
+.copy-right-div>p{
+  color: white;
+}
