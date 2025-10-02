@@ -112,7 +112,7 @@
   position: fixed;
   top: 20%;
   left: 0;
-  z-index: 2;
+  z-index: 4;
   background-color: white;
   border-top-right-radius: 45%;
   border-bottom-right-radius: 45%;
@@ -222,10 +222,10 @@
 .arrow{
   position: absolute;
   left: 50%;
-  top: -2.5rem;
+  top: -2.3rem;
   z-index: 4;
   background-color:#F2F1FA;
-  padding: .9rem;
+  padding: .9rem 1rem;
   border-radius: 50%;
   
 }
@@ -233,7 +233,7 @@
   height: 20px;
 }
 .arrow:hover{
-  background-color: #764af1;
+  background-color: #5118ef;
   color: white;
 }
 
@@ -270,6 +270,89 @@
   line-height: 1.5rem;
 }
 /* yaha per trusted section ki styling  end hoty he  */
+
+/* yaha se about section ki styling shuru ho rahi he  */
+#about-section{
+  height: 90vh;
+  background-color: #F8F9FA;
+  display: flex;
+}
+.about-section-div{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.about-pic-div{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.about-pic-div>#image1{
+  position: absolute;
+  top: 16%;
+  left: 28%;
+  border-radius: 10px;
+}
+.about-pic-div>#image2{
+  background-image: url(./Assets/about-section/2.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 300px;
+  bottom: 5%;
+  right: 2%;
+  border-radius: 10px;
+}
+#playicon{
+  height: 90px;
+  border-radius: 50%;
+  width: 90px;
+  padding: 2rem;
+  background-color: white;
+}
+
+.about-content-div{
+  justify-content: center;
+  gap: 20px;
+  padding-left: 2rem;
+}
+.about-pera1{
+  color: #764af1;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #F1F0F9;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+.about-heading{
+  font-size: 2rem;
+}
+.about-peragraph{
+  color: rgb(152, 151, 151);
+  line-height: 1.5rem;
+}
+.about-btn{
+  background-color: #764af1;
+  text-transform: uppercase;
+  color: white;
+font-size: 1rem;
+font-weight: 700;
+padding: 8px 19px;
+border: none;
+border-radius: 10px;
+transition: all 0.3s ease-out;
+}
+.about-btn:hover{
+  background-color: #490fea;
+}
+
 
 footer{
   height: 60vh;
