@@ -26,6 +26,20 @@
   align-items: center;
   z-index: 100;
 }
+.menu-icon {
+  display: none;
+  width: 70px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid rgb(191, 189, 189);
+  transition: all 0.3s ease;
+}
+.menu-icon:hover {
+  scale: 1.1;
+}
+.menu-icon:active {
+  scale: 0.9;
+}
 .links > ul {
   display: flex;
   list-style: none;
@@ -46,9 +60,12 @@
   background-size: 20px;
   background-repeat: no-repeat;
   margin-left: 1rem;
-  outline: none;
   border: none;
+  outline: none;
+  padding-left: 30px;
+  color: #5118ef;
 }
+
 /* yaha per header ki styling end hoty he  */
 
 /* yaha se home section ki styling shuru hoty he  */
@@ -74,6 +91,7 @@
 
 .home-content {
   position: absolute;
+  width: 40%;
   top: 50%;
   left: 50%;
   row-gap: 2rem;
@@ -83,13 +101,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; /* text center align */
+  text-align: center;
   padding-bottom: 2rem;
 }
 .home-content > h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 6vmin;
   font-weight: 500;
+  text-align: center;
 }
 .home-content > p {
   color: rgb(183, 180, 180);
@@ -99,12 +118,13 @@
   font-weight: 500;
   text-transform: uppercase;
   padding: 9px 16px;
+  border: none;
   border-radius: 10px;
   background-color: #764af1;
   color: white;
   transition: all 0.3s ease-out;
 }
-.home-btn:hover{
+.home-btn:hover {
   background-color: #5a23f1;
 }
 .setting-icon {
@@ -116,9 +136,8 @@
   background-color: white;
   border-top-right-radius: 45%;
   border-bottom-right-radius: 45%;
-  
 }
-.setting-icon>img{
+.setting-icon > img {
   height: 40px;
   animation: rotateIcon 2s linear infinite;
 }
@@ -150,11 +169,9 @@
   animation: fadeBlink 12s infinite;
 }
 
-/* Each image with its own delay */
 .slide1 {
   background-image: url("./Assets/Home-section/bg01.jpeg");
   animation-delay: 0s;
-  /* animation-duration: 3s; */
 }
 .slide2 {
   background-image: url("./Assets/Home-section/bg02.jpeg");
@@ -207,95 +224,109 @@
 /* yaha per home section ki styling  end hoty he  */
 
 /* yaha per trusted partners waghera k section ki styling shuru hoty he  */
-.trusted-section{
+.trusted-section {
   position: relative;
-  height: 400px;
   width: 100%;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* z-index: -1; */
 }
 
-.arrow{
+.arrow {
   position: absolute;
   left: 50%;
   top: -2.3rem;
   z-index: 4;
-  background-color:#F2F1FA;
-  padding: .9rem 1rem;
+  background-color: #f2f1fa;
+  padding: 0.9rem 1rem;
   border-radius: 50%;
-  
 }
-.arrow>img{
+.arrow > img {
   height: 20px;
 }
-.arrow:hover{
+.arrow:hover {
   background-color: #5118ef;
   color: white;
 }
 
-.partners{
-  width: 80%;
+.partners {
+  width: 90%;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+
 }
-.partners-div{
+.partners-div {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  
-  margin: 20px;
-  padding: 1rem;
-  height: 230px;
-  flex: 28%;
+  justify-content: space-around;
+  width: 30%;
+  padding: 2vw;
   border: 1px solid rgba(190, 188, 188, 0.577);
 }
-
-.icon-div>img{
-  height: 70px;
+.partners-div:hover .icon-name {
+  color: #5a23f1;
+}
+.icon-div > img {
+  height: 5vw;
   padding: 1rem;
   margin: 1rem;
   border: 2px dotted rgb(124, 123, 123);
   border-radius: 50%;
 }
-.icon-name{
-  font-size: 1.4rem;
+.icon-name {
+  font-size: 1.8vw;
   font-weight: 600;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
 }
-.icon-pera{
+.icon-pera {
   color: rgb(110, 110, 110);
-  line-height: 1.5rem;
+  line-height: 20px;
+font-size: 1.4vmax;
 }
 /* yaha per trusted section ki styling  end hoty he  */
 
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+ 
+
+}
+
+@media (max-width: 576px) {
+  
+}
+
 /* yaha se about section ki styling shuru ho rahi he  */
-#about-section{
+#about-section {
   height: 90vh;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   display: flex;
 }
-.about-section-div{
+.about-section-div {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-.about-pic-div{
+.about-pic-div {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
 }
-.about-pic-div>#image1{
+.about-pic-div > #image1 {
   position: absolute;
   top: 16%;
   left: 28%;
   border-radius: 10px;
 }
-.about-pic-div>#image2{
+.about-pic-div > #image2 {
   background-image: url(./Assets/about-section/2.jpeg);
   background-size: cover;
   background-position: center;
@@ -310,7 +341,7 @@
   right: 2%;
   border-radius: 10px;
 }
-#playicon{
+#playicon {
   height: 90px;
   border-radius: 50%;
   width: 90px;
@@ -318,119 +349,771 @@
   background-color: white;
 }
 
-.about-content-div{
+.about-content-div {
   justify-content: center;
   gap: 20px;
   padding-left: 2rem;
 }
-.about-pera1{
+.about-pera1 {
   color: #764af1;
   text-transform: uppercase;
   font-weight: 600;
-  background-color: #F1F0F9;
+  background-color: #f1f0f9;
   padding: 5px 15px;
   border-radius: 25px;
 }
-.about-heading{
+.about-heading {
   font-size: 2rem;
 }
-.about-peragraph{
+.about-peragraph {
   color: rgb(152, 151, 151);
   line-height: 1.5rem;
 }
-.about-btn{
+.about-btn {
   background-color: #764af1;
   text-transform: uppercase;
   color: white;
-font-size: 1rem;
-font-weight: 700;
-padding: 8px 19px;
-border: none;
-border-radius: 10px;
-transition: all 0.3s ease-out;
-}
-.about-btn:hover{
-  background-color: #490fea;
-}
-
-
-footer{
-  height: 60vh;
-  background-color: #161C2D;
- position: relative;
- 
-}
-.footer-icon{
-  height: 40px;
-  width: 40px;
-  border-radius: 20%;
-  padding: .6rem;
-  border: 1px solid #414e70;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px 19px;
+  border: none;
+  border-radius: 10px;
   transition: all 0.3s ease-out;
 }
-.footer-icon:hover{
+.about-btn:hover {
+  background-color: #490fea;
+}
+/* yaha per about section ki styling end hoty he  */
+#cta-section {
+  position: relative;
+  height: 400px;
+  background-image: url(./Assets/cta-section/cta01.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* Subtle parallax simulation */
+#cta-section::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.669); /* Dark overlay */
+  z-index: 1;
+}
+
+/* Text content */
+.cta-content {
+  position: relative;
+  z-index: 2; /* text overlay ke upar */
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#cta-heading {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+#cta-pera {
+  font-size: 1.2rem;
+  color: rgb(181, 179, 179);
+  margin-bottom: 2rem;
+}
+#cta-button {
+  outline: none;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+/* yaha per cta section k styling ka end ho raha he  */
+
+/* yaha se Why us k section  ki styling start ho rahi he  */
+.why-us-section {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 2rem;
+}
+.why-us {
+  text-transform: uppercase;
+  color: #764af1;
+  background-color: #f8f6fe;
+  padding: 3px 10px;
+  border-radius: 40px;
+}
+.why-us-heading {
+  font-size: 5vmin;
+  font-weight: 500;
+}
+.why-us-pera {
+  font-size: 2.5vmin;
+  color: rgb(109, 106, 106);
+  text-align: center;
+}
+#why-us-outer-div {
+  display: flex;
+  flex-direction: column;
+}
+.why-us-divs {
+  display: flex;
+}
+.why-us-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3vmin;
+  margin: 2rem;
+  border: 2px dotted rgb(228, 226, 226);
+  gap: 2vw;
+  transition: all 0.3s ease;
+}
+.div-icon {
+  height: 60px;
+}
+.why-us-div > a {
+  text-decoration: none;
+  color: rgb(113, 112, 112);
+  transition: all 0.3s ease;
+}
+.why-us-div > a:hover {
+  color: #764af1;
+  font-size: 1.2vmax;
+}
+.why-us-div:hover {
+  scale: 1.02;
+}
+.div-heading {
+  font-size: 1.7vmax;
+  font-weight: 600;
+}
+.div-pera {
+  font-size: 1.2vmax;
+  color: rgb(113, 112, 112);
+}
+/* yaha per why us k section ki styling ka end ho raha he  */
+
+/* yaha per testi section k section ki styling shuru ho rahi he  */
+#testi-section {
+  background-image: url(./Assets/testi-section/bg-testi.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  position: relative;
+}
+#testi-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+#testi-outer-div {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* All slides stacked at same position */
+.testi-div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: white;
+  animation: slideShow 8s infinite;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+/* animation delays for each slide */
+.testi-div:nth-child(1) {
+  animation-delay: 0s;
+}
+.testi-div:nth-child(2) {
+  animation-delay: 2s;
+}
+.testi-div:nth-child(3) {
+  animation-delay: 4s;
+}
+.testi-div:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.testi-pera1 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.testi-pic {
+  height: 90px;
+  border-radius: 50%;
+}
+h3 {
+  font-size: 18px;
+  color: #111;
+  margin-top: 10px;
+}
+
+.testi-pera2 {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.star-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.star-img {
+  width: 20px;
+  height: 20px;
+}
+
+/* yaha per testi section k section ki styling ka end ho raha he  */
+
+/* yaha se deals wale section ki styling shuru ho rahi he jo k section ki styling uper jesi hi he tho mene usi ka class de diya he is section ko b jo styling change he wo yaha per he  */
+
+.deals-div {
+  display: flex;
+  gap: 3vmin;
+  margin: 60px 0;
+}
+.deal {
+  height: 550px;
+  width: 35vmin;
+  border: 1px solid rgb(212, 208, 208);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#third-deal {
+  height: 650px;
+  transform: translatey(-50px);
+  border-top: none;
+}
+#third-deal > .deal-start-div {
+  background-color: #764af1;
+}
+.blue-arrow {
+  height: 25px;
+}
+.deal-start-div {
+  text-align: center;
+  width: 100%;
+  background-color: #161c2d;
+  padding: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.deal-start-div > h3 {
+  color: white;
+  font-size: 3.5vmin;
+  margin: 20px 0;
+}
+.deal-start-div > p {
+  color: rgb(160, 157, 157);
+}
+.deals-charges-div {
+  background-color: #f8f9fa;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  border-bottom: 1px solid rgb(212, 208, 208);
+}
+.deals-advantages {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.deals-advantages > p > img {
+  height: 20px;
+}
+.deals-advantages > p {
+  display: flex;
+  column-gap: 10px;
+  color: rgb(74, 73, 73);
+}
+.deals-btn {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid rgb(212, 208, 208);
+}
+.deals-btn > button {
+  border: none;
+  background-color: #161c2d;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  width: 160px;
+  border-radius: 10px;
+}
+.blue-btn > button {
   background-color: #764af1;
 }
 
-.footer-div{
+/* yaha per deals section k styling ka end ho raha he  */
+
+/* yaha se member section ki styling shuru ho rahi he jo k section ki styling pirse change he tho wohi class de diii he  */
+.member-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.team {
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.team:hover .member-contant {
+  transform: translateY(0);
+}
+.member-contant {
+  transform: translateY(100%);
+  height: 100%;
+  width: 100%;
+  background-color: #1109256d;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 30px;
+  transition: all 0.3s ease;
+}
+.member-contant > h2 {
+  color: white;
+}
+.member-contant > p {
+  color: white;
+}
+.member1 {
+  background-image: url(./Assets/what-special/1.jpeg);
+  background-size: cover;
+}
+.member2 {
+  background-image: url(./Assets/what-special/2.jpeg);
+  background-size: cover;
+}
+.member3 {
+  background-image: url(./Assets/what-special/3.jpeg);
+  background-size: cover;
+}
+.member4 {
+  background-image: url(./Assets/what-special/4.jpeg);
+  background-size: cover;
+}
+
+.team-icons {
+  height: 40px;
+  width: 40px;
+  background-color: #764af1;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.team-icons:hover {
+  background-color: #4923af;
+}
+
+/* yaha per member section ki styling end hoty he  */
+
+/* yaha se agle section some news ki styling shuru ho rahi he jo k section ki styling same tho wohi class de diii he why us section waliii  */
+
+.news-outer-div {
+  display: flex;
+  gap: 5vmin;
+}
+.news {
+  width: 350px;
+  border-radius: 20px;
+  border: 1px solid rgb(141, 139, 139);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+.news-img {
+  height: 200px;
+  width: 95%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.news-img-overlay {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  background-color: #13063755;
+  display: none;
+  transition: all 0.3s ease;
+}
+.news-img-overlay > button {
+  border: none;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 10px;
+  gap: 3px;
+  background-color: #764af1;
+  color: white;
+}
+.news-img-overlay > button > img {
+  height: 16px;
+}
+.news-img-overlay > a {
+  text-decoration: none;
+  color: rgb(239, 237, 237);
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.news-img-overlay > a:hover {
+  color: #5118ef;
+}
+.img1 {
+  background-image: url(./Assets/some-news/1.jpeg);
+}
+.img2 {
+  background-image: url(./Assets/some-news/2.jpeg);
+}
+.img3 {
+  background-image: url(./Assets/some-news/3.jpeg);
+}
+.news:hover .news-img-overlay {
+  display: flex;
+}
+.news:hover .news-img {
+  scale: 1.1;
+}
+.img-content > h3 {
+  font-size: 3vmin;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.img-content > p {
+  font-size: 2vmin;
+  color: rgb(91, 90, 90);
+}
+
+.likes-div {
+  border-top: 1px solid rgb(141, 139, 139);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.likes-div > span {
+  display: flex;
+  gap: 4px;
+}
+.comment-likes {
+  height: 20px;
+}
+/* yaha per hamare some news section ki styling end hoty he  */
+#companies-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background: #f8f8f8;
+}
+.companies-inner-div {
+  width: 60%;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+}
+#companies-section img {
+  width: 200px;
+  margin: 20px 0;
+  flex-shrink: 0;
+  animation: moveLogos 20s linear infinite;
+}
+@keyframes moveLogos {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  95% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* yaha per hamara companies k section ki styling end ho raha he  */
+
+/* yaha se hamare footer section ki styling start ho rahi he  */
+footer {
+  height: 60vh;
+  background-color: #161c2d;
+  position: relative;
+}
+.footer-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 20%;
+  padding: 0.6rem;
+  border: 1px solid #414e70;
+  transition: all 0.3s ease-out;
+}
+.footer-icon:hover {
+  background-color: #764af1;
+}
+
+.footer-div {
   padding-top: 4rem;
   width: 86%;
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
 }
-#footer-logo-div>p{
-color: rgb(184, 180, 180);
-margin-top: 2rem;
-margin-bottom: 2rem;
+#footer-logo-div > p {
+  color: rgb(184, 180, 180);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-.footer-links{
+.footer-links {
   display: flex;
   flex-direction: column;
 }
-.footer-links>p{
+.footer-links > p {
   color: white;
   font-size: 1.5rem;
 }
-.footer-links>a{
+.footer-links > a {
   text-decoration: none;
   color: rgb(170, 166, 166);
-   padding: 5px;
-   transition: all 0.3s ease-out;
+  padding: 5px;
+  transition: all 0.3s ease-out;
 }
-#right-icon{
+#right-icon {
   height: 14px;
 }
-.footer-links>a:hover{
+.footer-links > a:hover {
   color: #764af1;
 }
-.footer-address{
+.footer-address {
   display: flex;
   flex-direction: column;
 }
-.footer-address>p{
+.footer-address > p {
   color: rgb(182, 177, 177);
   padding: 5px;
 }
-.footer-address>p#heading{
+.footer-address > p#heading {
   font-size: 1.5rem;
   color: white;
 }
-.address-icons{
+.address-icons {
   height: 15px;
-  padding-right:5px;
+  padding-right: 5px;
 }
 
-.copy-right-div{
+.copy-right-div {
   height: 100px;
-width: 100%;
-display: flex;
-justify-content: space-around;
-align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border-top: 1px solid rgb(157, 155, 155);
   position: absolute;
   bottom: 0;
 }
-.copy-right-div>p{
+.copy-right-div > p {
   color: white;
+}
+/* yaha per hamare footer section k styling ka end ho raha he  */
+
+/* =========================================== Media quarries ===========================================  */
+@media (max-width: 992px) {
+  /* ====================== header section ======================  */
+  .navbar {
+    justify-content: space-between;
+  }
+  #logo {
+    margin-left: 30px;
+  }
+  .links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-right: 30px;
+  }
+
+  /* ====================== Home section ======================  */
+  .home-content {
+    width: 50%;
+  }
+  .home-content > h1 {
+    font-size: 6vmin;
+  }
+  .home-content > p {
+    font-size: 2vmin;
+  }
+  /* ====================== Trusted section ======================  */
+  .partners{
+    width: 100%;
+    padding-top: 30px;
+  }
+.partners-div{
+  width: 40%;
+  gap: 20px;
+}
+.icon-div>img{
+ height: 8vw;
+}
+.icon-name{
+  font-size: 2.5vw;
+}
+.icon-pera{
+  font-size: 1.6vw;
+}
+}
+
+@media (max-width: 768px) {
+  /* ====================== Home section ======================  */
+  .home-content {
+    width: 70%;
+  }
+
+  /* ====================== Trusted section ======================  */
+  .partners-div{
+width: 90%;
+}
+.icon-div>img{
+  height: 11vw;
+}
+.icon-name{
+  font-size: 3.5vmax;
+}
+.icon-pera{
+  font-size: 2.5vmax;
+}
+}
+
+@media (max-width: 576px) {
+  /* ====================== header section ======================  */
+  #logo {
+    margin: 0;
+  }
+  .menu-icon {
+    margin: 0;
+  }
+
+  /* ====================== Home section ======================  */
+  .home-content {
+    width: 80%;
+  }
+  .home-content > h1 {
+    font-size: 4vmax;
+  }
+  .home-content > p {
+    font-size: 2vmax;
+  }
+
+  /* ====================== Trusted section ======================  */
+  .partners-div{
+    width: 90%;
+  }
+  .icon-div>img{
+    height: 11vmax;
+  }
+  .icon-name{
+    font-size: 3vmax;
+  }
+  .icon-pera{
+    font-size: 2vmax;
+  }
 }
