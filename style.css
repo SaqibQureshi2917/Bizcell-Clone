@@ -32,6 +32,7 @@
   height: 50px;
   padding: 10px;
   border: 2px solid rgb(191, 189, 189);
+  border-radius: 20px;
   transition: all 0.3s ease;
 }
 .menu-icon:hover {
@@ -256,7 +257,6 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 .partners-div {
   margin-top: 20px;
@@ -285,61 +285,47 @@
 .icon-pera {
   color: rgb(110, 110, 110);
   line-height: 20px;
-font-size: 1.4vmax;
+  font-size: 1.4vmax;
 }
 /* yaha per trusted section ki styling  end hoty he  */
 
-@media (max-width: 992px) {
-  
-}
-
-@media (max-width: 768px) {
- 
-
-}
-
-@media (max-width: 576px) {
-  
-}
-
 /* yaha se about section ki styling shuru ho rahi he  */
 #about-section {
-  height: 90vh;
   background-color: #f8f9fa;
   display: flex;
+  flex-wrap: wrap;
+  padding: 90px 0;
 }
 .about-section-div {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: center;
 }
 .about-pic-div {
-  display: flex;
-  position: relative;
-  justify-content: center;
   align-items: center;
 }
-.about-pic-div > #image1 {
-  position: absolute;
-  top: 16%;
-  left: 28%;
-  border-radius: 10px;
+#image1 {
+  background-image: url(./Assets/about-section/1.jpeg);
+  background-size: cover;
+  height: 450px;
+  width: 350px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-.about-pic-div > #image2 {
+#image2 {
   background-image: url(./Assets/about-section/2.jpeg);
   background-size: cover;
-  background-position: center;
-  position: absolute;
-  height: 300px;
+  position: relative;
+  height: 250px;
   display: flex;
   justify-content: center;
-  align-content: center;
   align-items: center;
-  width: 300px;
-  bottom: 5%;
-  right: 2%;
+  width: 250px;
   border-radius: 10px;
+  transform: translate(100px, 30px);
 }
 #playicon {
   height: 90px;
@@ -350,7 +336,6 @@ font-size: 1.4vmax;
 }
 
 .about-content-div {
-  justify-content: center;
   gap: 20px;
   padding-left: 2rem;
 }
@@ -384,13 +369,13 @@ font-size: 1.4vmax;
   background-color: #490fea;
 }
 /* yaha per about section ki styling end hoty he  */
+
 #cta-section {
   position: relative;
   height: 400px;
   background-image: url(./Assets/cta-section/cta01.jpeg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   overflow: hidden;
 }
 
@@ -477,15 +462,16 @@ font-size: 1.4vmax;
   font-size: 2.5vmin;
   color: rgb(109, 106, 106);
   text-align: center;
-}
-#why-us-outer-div {
-  display: flex;
-  flex-direction: column;
+  width: 70%;
 }
 .why-us-divs {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .why-us-div {
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -506,17 +492,16 @@ font-size: 1.4vmax;
 }
 .why-us-div > a:hover {
   color: #764af1;
-  font-size: 1.2vmax;
 }
 .why-us-div:hover {
   scale: 1.02;
 }
 .div-heading {
-  font-size: 1.7vmax;
+  font-size: 3vmin;
   font-weight: 600;
 }
 .div-pera {
-  font-size: 1.2vmax;
+  font-size: 2.2vmin;
   color: rgb(113, 112, 112);
 }
 /* yaha per why us k section ki styling ka end ho raha he  */
@@ -546,15 +531,12 @@ font-size: 1.4vmax;
   width: 300px;
   height: 400px;
   overflow: hidden;
-  background-color: white;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* All slides stacked at same position */
 .testi-div {
   position: absolute;
   inset: 0;
@@ -642,13 +624,16 @@ h3 {
 /* yaha se deals wale section ki styling shuru ho rahi he jo k section ki styling uper jesi hi he tho mene usi ka class de diya he is section ko b jo styling change he wo yaha per he  */
 
 .deals-div {
+  width: 98%;
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 3vmin;
   margin: 60px 0;
 }
 .deal {
   height: 550px;
-  width: 35vmin;
+  width: 23%;
   border: 1px solid rgb(212, 208, 208);
   border-radius: 10px;
   display: flex;
@@ -731,6 +716,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .team {
@@ -797,6 +783,8 @@ h3 {
 
 .news-outer-div {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 5vmin;
 }
 .news {
@@ -908,11 +896,8 @@ h3 {
   position: relative;
   display: flex;
 }
-#companies-section img {
-  width: 200px;
-  margin: 20px 0;
-  flex-shrink: 0;
-  animation: moveLogos 20s linear infinite;
+.companies-inner-div > img {
+  animation: moveLogos 10s linear infinite;
 }
 @keyframes moveLogos {
   0% {
@@ -935,7 +920,6 @@ h3 {
 
 /* yaha se hamare footer section ki styling start ho rahi he  */
 footer {
-  height: 60vh;
   background-color: #161c2d;
   position: relative;
 }
@@ -957,6 +941,9 @@ footer {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
+}
+#links-footer {
+  display: flex;
 }
 #footer-logo-div > p {
   color: rgb(184, 180, 180);
@@ -1007,8 +994,6 @@ footer {
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid rgb(157, 155, 155);
-  position: absolute;
-  bottom: 0;
 }
 .copy-right-div > p {
   color: white;
@@ -1016,6 +1001,14 @@ footer {
 /* yaha per hamare footer section k styling ka end ho raha he  */
 
 /* =========================================== Media quarries ===========================================  */
+@media (max-width: 1200px) {
+  .team {
+    width: 220px;
+  }
+  .news {
+    width: 300px;
+  }
+}
 @media (max-width: 992px) {
   /* ====================== header section ======================  */
   .navbar {
@@ -1043,23 +1036,75 @@ footer {
     font-size: 2vmin;
   }
   /* ====================== Trusted section ======================  */
-  .partners{
+  .partners {
     width: 100%;
     padding-top: 30px;
   }
-.partners-div{
-  width: 40%;
-  gap: 20px;
-}
-.icon-div>img{
- height: 8vw;
-}
-.icon-name{
-  font-size: 2.5vw;
-}
-.icon-pera{
-  font-size: 1.6vw;
-}
+  .partners-div {
+    width: 40%;
+    gap: 20px;
+  }
+  .icon-div > img {
+    height: 8vw;
+  }
+  .icon-name {
+    font-size: 2.5vw;
+  }
+  .icon-pera {
+    font-size: 1.6vw;
+  }
+
+  /* ====================== About section ======================  */
+  #about-section {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .about-section-div {
+    width: 90%;
+  }
+  /* ====================== Why us section ======================  */
+  .why-us-div {
+    width: 40%;
+  }
+  /* ====================== Testi section ======================  */
+  #testi-outer-div {
+    width: 400px;
+  }
+
+  /* ====================== Deals section ======================  */
+  .deals-div {
+    width: 100%;
+    gap: 60px;
+  }
+  .deal {
+    width: 40%;
+  }
+  /* ====================== Team section ======================  */
+  .team {
+    width: 350px;
+    height: 350px;
+  }
+
+  /* ====================== News section ======================  */
+  .news {
+    width: 350px;
+  }
+
+  /* ====================== Footer ======================  */
+  .footer-div {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+  #footer-logo-div {
+    width: 90%;
+  }
+  #links-footer {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1069,18 +1114,51 @@ footer {
   }
 
   /* ====================== Trusted section ======================  */
-  .partners-div{
-width: 90%;
-}
-.icon-div>img{
-  height: 11vw;
-}
-.icon-name{
-  font-size: 3.5vmax;
-}
-.icon-pera{
-  font-size: 2.5vmax;
-}
+  .partners-div {
+    width: 90%;
+  }
+  .icon-div > img {
+    height: 11vw;
+  }
+  .icon-name {
+    font-size: 3.5vmax;
+  }
+  .icon-pera {
+    font-size: 2.5vmax;
+  }
+  /* ====================== Why us section ======================  */
+  .why-us-div {
+    width: 70%;
+  }
+  /* ====================== Testi section ======================  */
+  #testi-outer-div {
+    width: 500px;
+  }
+
+  /* ====================== Deals section ======================  */
+  .deal {
+    width: 80%;
+  }
+  /* ====================== Team section ======================  */
+  .team {
+    width: 500px;
+    height: 400px;
+  }
+  /* ====================== News section ======================  */
+  .news {
+    width: 500px;
+  }
+  /* ====================== Footer ======================  */
+  #links-footer {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .copy-right-div {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1104,16 +1182,86 @@ width: 90%;
   }
 
   /* ====================== Trusted section ======================  */
-  .partners-div{
+  .partners-div {
     width: 90%;
   }
-  .icon-div>img{
+  .icon-div > img {
     height: 11vmax;
   }
-  .icon-name{
+  .icon-name {
     font-size: 3vmax;
   }
-  .icon-pera{
+  .icon-pera {
     font-size: 2vmax;
+  }
+
+  /* ====================== About section ======================  */
+  #image1 {
+    height: 80vw;
+    width: 65vw;
+  }
+  #image2 {
+    height: 45vw;
+    width: 45vw;
+    transform: translate(18vw, 30px);
+  }
+  #playicon {
+    height: 15vw;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #playicon > img {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+  }
+
+  .about-pera1 {
+    font-size: 14px;
+  }
+  .about-peragraph {
+    font-size: 15px;
+  }
+
+  /* ====================== Why us section ======================  */
+  .why-us-div {
+    width: 90%;
+  }
+  .div-heading {
+    font-size: 4.3vw;
+  }
+  .div-pera {
+    font-size: 3vw;
+  }
+
+  /* ====================== Testi section ======================  */
+  #testi-outer-div {
+    width: 90%;
+  }
+
+  /* ====================== Deals section ======================  */
+  .deal {
+    width: 90%;
+  }
+  /* ====================== Team section ======================  */
+  .team {
+    width: 90%;
+    height: 100vw;
+  }
+  /* ====================== News section ======================  */
+  .news {
+    width: 90%;
+  }
+  .img-content > h3 {
+    font-size: 23px;
+  }
+  .img-content > p {
+    font-size: 16px;
+  }
+  /* ====================== Companies section ======================  */
+  .companies-inner-div {
+    width: 90%;
   }
 }
