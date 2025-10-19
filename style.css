@@ -943,9 +943,13 @@ footer {
   justify-content: space-around;
   margin: 0 auto;
 }
+#footer-logo-div{
+  width: 20%;
+}
 #links-footer {
   display: flex;
-  width: 100%;
+  width: 80%;
+  justify-content: space-around;
 }
 #footer-logo-div > p {
   color: rgb(184, 180, 180);
